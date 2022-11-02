@@ -4,13 +4,17 @@ import DashboardIcon from "../assets/dashboard_icon.svg";
 import AddIcon from "../assets/add_icon.svg";
 //navlink adds the active class so its easier to style than Link
 import { NavLink } from "react-router-dom";
+import Avatar from "./Avatar";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 export default function Sidebar() {
+  const { user } = useAuthContext();
   return (
     <div className="sidebar">
       <div className="sidebar-content">
         <div className="user">
-          <p>Hey user</p>
+          <Avatar src={user.photoURL} />
+          <p>Hey {user.displayName}</p>
         </div>
         <nav className="links">
           <ul>
