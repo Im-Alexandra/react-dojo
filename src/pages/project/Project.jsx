@@ -3,6 +3,7 @@ import "./Project.css";
 import { useParams } from "react-router-dom";
 import { useDocument } from "../../hooks/useDocument";
 import ProjectSummary from "./ProjectSummary";
+import ProjectComments from "./ProjectComments";
 
 export default function Project() {
   const { id } = useParams();
@@ -12,7 +13,12 @@ export default function Project() {
     <div className="project-details">
       {error && <p className="error">{error}</p>}
       {!document && <div className="loading">Loading...</div>}
-      {document && <ProjectSummary project={document} />}
+      {document && (
+        <>
+          <ProjectSummary project={document} />
+          <ProjectComments />
+        </>
+      )}
     </div>
   );
 }
