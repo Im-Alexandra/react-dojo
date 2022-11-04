@@ -36,3 +36,7 @@
   width: 30px;
   height: 30px;
 }
+.project-list .comments-count {
+  text-align: end;
+  font-size: 0.7em;
+}

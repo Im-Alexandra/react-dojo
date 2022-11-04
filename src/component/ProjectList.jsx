@@ -20,6 +20,7 @@ export default function ProjectList({ projects }) {
               ))}
             </ul>
           </div>
+          <p className="comments-count">{project.comments.length} comments</p>
         </Link>
       ))}
     </div>
