@@ -20,7 +20,7 @@ export default function ProjectFilter({ currentFilter, changeFilter }) {
         {filterList.map((f) => (
           <button
             className={currentFilter === f ? "active" : ""}
-            key="f"
+            key={f}
             onClick={() => handleClick(f)}
           >
             {f}
